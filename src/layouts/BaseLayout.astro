@@ -1,26 +1,22 @@
 ---
+import Header from '../componenet/Navbar.astro';
+import Footer from '../componenet/Footer.astro';
+import '../styles/global.css';
 import Navbar from "../componenet/Navbar.astro";
-import Footer from "../componenet/Footer.astro";
+const pageTitle = "Page d'accueil";
 ---
-
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
 </head>
 <body>
 <Navbar />
-<h1>My Astro Learning Blog</h1>
-<p>This is where I will post about my journey learning Astro.</p>
-<ul>
-    <li><a href="/posts/post-1/">Post 1</a></li>
-    <li><a href="/posts/post-2/">Post 2</a></li>
-    <li><a href="/posts/post-3/">Post 3</a></li>
-</ul>
-<Footer/>
+<h1>{pageTitle}</h1>
+<Footer />
 <script>
     import "../scripts/menu.js";
 </script>

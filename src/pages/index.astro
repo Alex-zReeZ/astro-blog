@@ -1,17 +1,23 @@
 ---
+import Footer from "../componenet/Footer.astro";
+const pageTitle = "Home Page"
+import Navbar from "../componenet/Navbar.astro";
 
-import Navbar from "../componenet/Navbar.astro";---
-
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 	<Navbar />
-		<h1>Astro</h1>
+		<h1>{pageTitle}</h1>
+	<Footer />
+	<script>
+		import "../scripts/menu.js";
+	</script>
 	</body>
 </html>
