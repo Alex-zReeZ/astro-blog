@@ -1,4 +1,6 @@
 ---
+import Navbar from "../componenet/Navbar.astro";
+import Footer from "../componenet/Footer.astro";
 const pageTitle = "About Me";
 
 const identity = {
@@ -23,9 +25,8 @@ const skillColor = "navy"
     <title>{pageTitle}</title>
 </head>
 <body class="m-0 ">
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<Navbar />
+
 <h1 class="text-purple-600 text-4xl">{pageTitle}</h1>
 <h2>... and my new Astro site!</h2>
 
@@ -44,7 +45,7 @@ const skillColor = "navy"
 
 <p>My skills are:</p>
 <ul>
-    {skills.map((skill) => <li class="text-green-500 font-bold">{skill}</li>)}
+    {skills.map((skill) => <li class="text-green-500 font-bold">{ skill }</li>)}
 </ul>
 
 {happy && <p>I am happy to be learning Astro!</p>}
@@ -53,5 +54,6 @@ const skillColor = "navy"
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
+<Footer />
 </body>
 </html>
