@@ -6,8 +6,9 @@ html {
 body {
     margin: 0 auto;
     width: 100%;
+    max-width: 80ch;
     padding: 1rem;
-    text-align: center;
+    line-height: 1.5;
 }
 
 * {
@@ -17,6 +18,21 @@ body {
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+}
+
+/* nav styles */
+
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
 }
 
 .nav-links {
@@ -60,21 +76,17 @@ h1 {
         display: inline-block;
         padding: 15px 20px;
     }
+
     .hamburger {
         display: none;
     }
-
 }
 
-.hamburger {
-    padding-right: 20px;
-    cursor: pointer;
+html.dark {
+    background-color: #0d0950;
+    color: #fff;
 }
 
-.hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
+.dark .nav-links a {
+    color: #fff;
 }
