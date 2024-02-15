@@ -1,6 +1,6 @@
 ---
-import Footer from '../componenet/Footer.astro';
-import Navbar from "../componenet/Navbar.astro";
+import Footer from '../src/componenet/Footer.astro';
+import Navbar from "../src/componenet/Navbar.astro";
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">
@@ -17,7 +17,7 @@ const { pageTitle } = Astro.props;
 <slot />
 <Footer />
 <script>
-    import "../scripts/menu.js";
+    import "../src/scripts/menu.js";
 </script>
 </body>
 </html>
