@@ -1,6 +1,8 @@
 ---
 import Navbar from "../componenet/Navbar.astro";
 import Footer from "../componenet/Footer.astro";
+import '../styles/style.css';
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -25,10 +27,10 @@ const skillColor = "navy"
     <title>{pageTitle}</title>
 </head>
 
-<body class="m-56 text-center">
+<body>
 <Navbar />
 
-<h1 class="text-purple-600 text-4xl">{pageTitle}</h1>
+<h1>{pageTitle}</h1>
 
 <p>Here are a few facts about me:</p>
 <ul>
@@ -41,7 +43,7 @@ const skillColor = "navy"
 
 <p>My skills are:</p>
 <ul>
-    {skills.map((skill) => <li class="text-green-500 font-bold">{ skill }</li>)}
+    {skills.map((skill) => <li>{ skill }</li>)}
 </ul>
 
 {happy && <p>I am happy to be learning Astro!</p>}
